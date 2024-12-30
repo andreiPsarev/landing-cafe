@@ -5,6 +5,8 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+
 }
 
 .header {
@@ -32,9 +34,15 @@ ul a {
 }
 
 
+
+
+
+
+
+
 .about {
     text-align: center;
-
+    background-color: antiquewhite;
 }
 
 .about h1 {
@@ -74,4 +82,84 @@ ul a {
     .cards {
         gap: 20px; /* Уменьшаем расстояние между карточками */
     }
+}
+
+
+.menu {
+    background-color: rgb(250, 242, 232);
+}
+
+.menu h1 {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.burgers {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.burger-info {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.burger-card, .pizza-card {
+    max-width: 300px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.pizza-card {
+    border: 1px, solid, rgb(138, 129, 104);
+}
+
+.burger-card img, .pizza-card img{
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+.burger-card h2, .pizza-card h2{
+    margin-bottom: 20px;
+}
+
+.burger-card p, .pizza-card p{
+    margin-bottom: 20px;
+}
+
+.burger-card button, .pizza-card button {
+    background-color: red;
+    border: none;
+    border-radius: 35px;
+    width: 220px;
+    height: 60px;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+
+
+
+.pizza {    
+    margin-top: 50px;
+    background-image: url(img/burger/back.png);
+        background-color: rgba(255, 255, 255, 0.8); /* Белый цвет с 50% прозрачностью */
+    background-blend-mode: overlay; /* Смешивание изображения и цвета */
+}
+
+.pizza-menu {    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
 }
