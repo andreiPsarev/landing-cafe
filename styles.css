@@ -110,13 +110,27 @@ ul a {
 }
 
 .burger-card, .pizza-card {
-    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Распределяем элементы внутри карточки */
+    align-items: center; /* Центрируем по горизонтали */
+    width: 300px;
+    height: auto;
     background-color: white;
     border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box; /* Учитываем отступы */
 }
+
+.burger-card p, .pizza-card p {
+    min-height: 60px; /* Задаем минимальную высоту для описания */
+    margin-bottom: 20px;
+}
+
 
 .pizza-card {
     border: 1px, solid, rgb(138, 129, 104);
+    margin-bottom: 50px;
 }
 
 .burger-card img, .pizza-card img{
@@ -126,12 +140,11 @@ ul a {
 }
 
 .burger-card h2, .pizza-card h2{
+    min-height: 60px; /* Задаем минимальную высоту для описания */
     margin-bottom: 20px;
 }
 
-.burger-card p, .pizza-card p{
-    margin-bottom: 20px;
-}
+
 
 .burger-card button, .pizza-card button {
     background-color: red;
@@ -151,11 +164,25 @@ ul a {
 .pizza {    
     margin-top: 50px;
     background-image: url(img/burger/back.png);
-        background-color: rgba(255, 255, 255, 0.8); /* Белый цвет с 50% прозрачностью */
+    background-color: rgba(255, 255, 255, 0.8); /* Белый цвет с 50% прозрачностью */
     background-blend-mode: overlay; /* Смешивание изображения и цвета */
 }
 
 .pizza-menu {    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+}
+
+
+.rolls {    
+    background-color: rgb(250, 242, 232);
+}
+
+.rolls-menu {    
     display: flex;
     flex-wrap: wrap;
     align-items: center;
