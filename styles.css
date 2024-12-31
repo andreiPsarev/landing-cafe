@@ -190,3 +190,73 @@ ul a {
     gap: 30px;
     text-align: center;
 }
+
+
+
+.about-section {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    background-image: url(img/burger/back.png);
+    background-color: rgba(213, 250, 255, 0.8); /* Белый цвет с 50% прозрачностью */
+    background-blend-mode: overlay; /* Смешивание изображения и цвета */
+    position: relative; /* Для позиционирования содержимого */
+    padding: 20px; /* Отступы вокруг секции */
+}
+
+.image-content {
+    width: 1200px; /* Ширина области */
+    height: 500px; /* Высота области */
+    overflow: hidden; /* Скрыть всё лишнее */
+    position: relative;
+    margin-right: 100px;
+    border-radius: 15px;
+
+}
+
+.image-content img {
+    position: absolute;
+    width: auto;
+    height: 100%; /* Растягивает изображение по высоте */
+    object-fit: cover; /* Подстраивает содержимое */
+    object-position: center; /* Выравнивание по центру */
+}
+
+.text-content {
+    background-color: rgb(250, 242, 232);
+    padding: 20px; /* Внутренние отступы текста */
+    z-index: 2; /* Поверх изображения */
+
+    max-width: 700px;
+    margin-right: -150px; /* Сдвиг текста вверх */
+    margin-left: 100px;
+    padding-left: 40px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Лёгкая тень для текста */
+    border-radius: 15px;
+}
+
+.text-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.75em;
+}
+
+.text-content button {
+    width: 150px;
+    height: 60px;
+    border: none;
+    border-radius: 35px;
+    background-color: rgba(89, 194, 0, 1);
+    color: white;
+    font-size: 16px;
+}
+.text-content button:hover {
+    background-color: rgb(153, 223, 49);
+    cursor: pointer;
+}
