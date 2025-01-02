@@ -211,7 +211,6 @@ ul a {
     position: relative;
     margin-right: 100px;
     border-radius: 15px;
-
 }
 
 .image-content img {
@@ -260,3 +259,71 @@ ul a {
     background-color: rgb(153, 223, 49);
     cursor: pointer;
 }
+
+
+
+
+
+
+.block {
+    height: 100vh; /* Каждый блок занимает высоту экрана */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+}
+
+
+/* Блок с фото */
+.image-block {
+    background-image: url('img/some.png'); /* Укажите путь к вашему изображению */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Эффект "прикрепленного" фона */
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+/* Галерея */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три колонки */
+    gap: 25px;
+    max-width: 1200px;
+}
+
+/* Фото */
+.gallery-photo {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 3px solid #ccc;
+}
+
+.gallery-photo img {
+    width: 300px;
+    height: 200px; /* Сохранение пропорций */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    border: 3px solid #ccc;
+}
+
+.gallery-photo:hover img {
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+/* Адаптивность */
+@media (max-width: 980px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* Две колонки */
+    }
+}
+
+@media (max-width: 700px) {
+    .image-block {
+        display: none;
+    }
+}
+
